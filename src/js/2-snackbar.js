@@ -9,15 +9,17 @@ form.addEventListener('submit', (event) => {
     .then((delay) => {
         iziToast.success({
             title: 'OK',
-            message: `Fulfilled promide in ${delay}ms`,
-            position: 'topRight'
+            message: `✅Fulfilled promise in ${delay}ms`,
+            position: 'topRight',
+            icon: ''
         });
     })
     .catch((delay) => {
     iziToast.error({
         title: 'Error',
-        message: `Rejected promise in ${delay}ms`,
-        position: 'topRight'
+        message: `❌Rejected promise in ${delay}ms`,
+        position: 'topRight',
+        icon: ''
     });
     });
     form.reset();
